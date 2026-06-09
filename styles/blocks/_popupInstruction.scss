@@ -29,7 +29,7 @@
     height: 100%;
     overflow-y: auto;
     background-color: $white-color;
-    background-image: url('../../images/background_popupInstruction.svg');
+    background-image: url('../images/background_popupInstruction.svg');
     background-size: cover;
     background-position: top;
     border-radius: 25px;
@@ -62,7 +62,7 @@
     height: 24px;
     border: none;
     border-radius: 50%;
-    background-image: url('../../images/icon_close.svg');
+    background-image: url('../images/icon_close.svg');
     background-repeat: no-repeat;
     background-size: contain;
     cursor: pointer;

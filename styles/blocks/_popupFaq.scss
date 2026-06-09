@@ -29,7 +29,7 @@
     height: 100%;
     overflow-y: auto;
     background-color: $white-color;
-    background-image: url('../../images/background_popupFaq.svg');
+    background-image: url('../images/background_popupFaq.svg');
     background-size: cover;
     background-position: top;
     border-radius: 25px;
@@ -63,7 +63,7 @@
     height: 24px;
     border: none;
     border-radius: 50%;
-    background-image: url('../../images/icon_close.svg');
+    background-image: url('../images/icon_close.svg');
     background-repeat: no-repeat;
     background-size: contain;
     cursor: pointer;
@@ -130,7 +130,7 @@
       height: 20px;
       flex-shrink: 0;
       margin-left: 12px;
-      background-image: url('../../images/dropdown.svg');
+      background-image: url('../images/dropdown.svg');
       background-repeat: no-repeat;
       background-size: contain;
       transition: transform 0.3s;

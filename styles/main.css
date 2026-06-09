@@ -36,7 +36,7 @@
   padding: 0 15px;
   margin: 0;
   overflow-x: hidden;
-  background-image: url("../../images/background_mobile.png");
+  background-image: url("../images/background_mobile.png");
   background-repeat: no-repeat;
   background-position: top 10%;
   background-size: cover;
@@ -44,7 +44,7 @@
 @media (min-width: 640px) {
   .trade-in {
     padding: 0 37px;
-    background-image: url("../../images/background.png");
+    background-image: url("../images/background.png");
     background-position: bottom right;
   }
 }
@@ -319,7 +319,7 @@
   height: 100%;
   overflow-y: auto;
   background-color: #FFFFFF;
-  background-image: url("../../images/background_popupInstruction.svg");
+  background-image: url("../images/background_popupInstruction.svg");
   background-size: cover;
   background-position: top;
   border-radius: 25px;
@@ -352,7 +352,7 @@
   height: 24px;
   border: none;
   border-radius: 50%;
-  background-image: url("../../images/icon_close.svg");
+  background-image: url("../images/icon_close.svg");
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
@@ -616,7 +616,7 @@
   height: 100%;
   overflow-y: auto;
   background-color: #FFFFFF;
-  background-image: url("../../images/background_popupFaq.svg");
+  background-image: url("../images/background_popupFaq.svg");
   background-size: cover;
   background-position: top;
   border-radius: 25px;
@@ -650,7 +650,7 @@
   height: 24px;
   border: none;
   border-radius: 50%;
-  background-image: url("../../images/icon_close.svg");
+  background-image: url("../images/icon_close.svg");
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
@@ -713,7 +713,7 @@
   height: 20px;
   flex-shrink: 0;
   margin-left: 12px;
-  background-image: url("../../images/dropdown.svg");
+  background-image: url("../images/dropdown.svg");
   background-repeat: no-repeat;
   background-size: contain;
   transition: transform 0.3s;
