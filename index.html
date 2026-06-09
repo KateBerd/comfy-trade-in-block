@@ -1,0 +1,262 @@
+<!-- #region head-->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trade In</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<!-- #endregion head-->
+
+<body class="body">
+  <section class="trade-in">
+
+    <!-- #region baanner -->
+    <div class="trade-in__banner banner">
+      <picture>
+        <source media="(min-width: 640px)" srcset="images/banner_tablet.png">
+        <img src="images/banner_mobile.png" alt="Trade In до -70%" class="banner__img">
+      </picture>
+    </div>
+    <!-- #endregion banner-->
+
+    <!-- #region cards -->
+    <div class="trade-in__cards cards">
+      <div class="cards__content">
+
+        <div class="cards__card">
+          <img 
+            src="images/clipboard.png"
+            class="cards__card-img"
+            alt="Picture clipboard"
+          >
+          <div class="cards__card-content">
+            <div class="cards__card-info">
+              <h3 class="cards__card-title">TRADE IN в три кроки</h3>
+              <p class="cards__card-desc">Переглянь інструкцію та зроби свою першу покупку в TRADE IN  із вигодою до 70%</p>
+            </div>
+            <button class="cards__btn cards__btn--green js-open-popup" data-popup="instruction">
+              Переглянути інструкцію
+            </button>
+          </div>
+        </div>
+
+        <div class="cards__card">
+          <img 
+            src="images/picture.png" 
+            class="cards__card-img"
+            alt="Picture discount"
+          >
+          <div class="cards__card-content">
+            <div class="cards__card-info">
+              <h3 class="cards__card-title">Заощаджуйте до 70%</h3>
+              <p class="cards__card-desc">🔥 Отримайте додаткову вигоду в TRADE IN до 70%, шукайте товари з кнопкою</p>
+            </div>
+            <div class="cards__btn-wrapper">
+              <button class="cards__btn cards__btn--outline js-open-popup" data-popup="video">
+                <img 
+                    src="images/icon_button.png" 
+                    alt="icon Trade In" 
+                    class="cards__item-btn-icon"
+                >
+                Здати свій пристрій
+              </button>
+              <img 
+                src="images/icon_arrow.svg" 
+                alt="arrow"
+                class="cards__btn-arrow"
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="cards__card">
+          <img 
+            src="images/phones.png"
+            alt="Picture phones"
+            class="cards__card-img"
+          >
+          <div class="cards__card-content">
+            <div class="cards__card-info">
+              <h3 class="cards__card-title">ДОДАТКОВА ВИГОДА <br> В TRADE IN на НОВИЙ iPhone до <span style="white-space: nowrap">5 800 ₴</span></h3>
+            </div>
+            <button class="cards__btn cards__btn--green">Детальніше</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- #endregion cards-->
+
+    <!-- #region faq -->
+    <div class="trade-in__faq faq">
+      <h2 class="faq__title">Залишились питання?</h2>
+      <button class="faq__btn btn--outline js-open-popup" data-popup="faq">
+        Найчастіші питання
+      </button>
+    </div>
+    <!-- #endregion faq-->
+
+  </section>
+
+  <!-- #region popupInstruction -->
+  <div class="popup popupInstruction" id="popup-instruction">
+    <div class="popupInstruction__overlay js-close-popup"></div>
+    <div class="popupInstruction__content">
+      <button class="popupInstruction__btnClose js-close-popup"></button>
+
+      <div class="popupInstruction__header">
+        <img src="/images/logo_trade-in.png" alt="Logo Trade In" class="popupInstruction__logo">
+        <h2 class="popupInstruction__title">в три кроки</h2>
+      </div>
+
+      <div class="popupInstruction__body">
+        <ul class="popupInstruction__list">
+          <li class="popupInstruction__item">
+            <h3 class="popupInstruction__item-number">Крок 1</h3>
+            <div class="popupInstruction__item-info">
+              <p class="popupInstruction__item-title">Збери старі гаджети</p>
+              <p class="popupInstruction__item-desc">
+                У тебе вдома точно лежить щось,
+                чим ти давно не користуєшся.
+                Час навести лад i перетворити це
+                на вигоду!
+              </p>
+            </div>
+
+            <div class="popupInstruction__item-whatCanBeGiven">
+              <p class="popupInstruction__item-title">🔄 Що можна здати:</p>
+              <div class="popupInstruction__item-whatCanBeGiven-item">
+                <p class="popupInstruction__item-whatCanBeGiven-desc">
+                – смартфони<br>
+                – планшети<br>
+                – ноутбуки
+              </p>
+              <p class="popupInstruction__item-whatCanBeGiven-desc">
+                – смарт-годинники<br>
+                – навушники TWS<br>
+                – i навіть ігрові приставки!
+              </p>
+              </div>
+            </div>
+          </li>
+          <li class="popupInstruction__item">
+            <h3 class="popupInstruction__item-number">Крок 2</h3>
+            <div class="popupInstruction__item-info">
+              <p class="popupInstruction__item-title">Обирай новеньке — з вигодою</p>
+              <p class="popupInstruction__item-desc">
+                Мрієш про новий ґаджет?
+                Заходь на 
+                <a 
+                  href="https://comfy.ua/" 
+                  target="_blank"
+                  class="popupInstruction__item-link"
+                >
+                  comfy.ua (https://comfy.ua/)
+                </a>
+                або в додаток COMFY.<br>
+                📱 Шукай товари з кнопкою "Оцінити свій пристрій"<br>
+                💬 Оцінюй старий пристрій онлайн та дізнайся його точну вартість!
+              </p>
+              </div>
+              <button class="popupInstruction__item-btn">
+                <img 
+                  src="images/icon_button.png" 
+                  alt="icon Trade In" 
+                  class="popupInstruction__item-btn-icon"
+                >
+                Оцінити свій пристрій
+              </button>
+
+          </li>
+          <li class="popupInstruction__item">
+            <h3 class="popupInstruction__item-number">Крок 3</h3>
+            <div class="popupInstruction__item-info">
+              <p class="popupInstruction__item-title">Обмінюй і радій!</p>
+              <p class="popupInstruction__item-desc">
+                Оформлюй замовлення на новий пристрій прямо на сайті або в додатку. Здати старий пристрій <br>
+                або ж пройти процедуру оцінки  можна у найближчому магазині COMFY
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <p class="popupInstruction__desc">🎉 Отримуй свою вигоду на нову техніку та насолоджуйся покупкою!</p>
+      </div>
+    </div>
+  </div>
+  <!-- #endregion popupInstruction-->
+  
+  <!-- #region popupFaq -->
+  <div class="popup popupFaq" id="popup-faq">
+    <div class="popupFaq__overlay js-close-popup"></div>
+    <div class="popupFaq__content">
+      <button class="popupFaq__btnClose js-close-popup"></button>
+
+      <h2 class="popupFaq__title">Найчастіші питання</h2>
+
+      <div class="popupFaq__accordion">
+
+        <details class="popupFaq__item">
+          <summary class="popupFaq__question">
+            Що таке TRADE IN?
+          </summary>
+          <p class="popupFaq__answer">
+            Це твій супер-шанс оновити техніку з максимальною вигодою! 
+            Здай свій старий пристрій та отримай вигоду на новенький омріяний гаджет. Легко, швидко та вигідно!
+          </p>
+        </details>
+
+        <details class="popupFaq__item">
+          <summary class="popupFaq__question">
+            Що впливає на розмір вигоди?
+          </summary>
+          <p class="popupFaq__answer">
+            Відповідь тут...
+          </p>
+        </details>
+
+        <details class="popupFaq__item">
+          <summary class="popupFaq__question">
+            Як працює TRADE IN в магазині?
+          </summary>
+          <p class="popupFaq__answer">
+            Відповідь тут...
+          </p>
+        </details>
+
+        <details class="popupFaq__item">
+          <summary class="popupFaq__question">
+            Як відбувається розрахунок вигоди на сайті?
+          </summary>
+          <p class="popupFaq__answer">
+            Відповідь тут...
+          </p>
+        </details>
+
+        <details class="popupFaq__item">
+          <summary class="popupFaq__question">
+            Як відбувається розрахунок вигоди в магазині?
+          </summary>
+          <p class="popupFaq__answer">
+            Відповідь тут...
+          </p>
+        </details>
+
+        <details class="popupFaq__item">
+          <summary class="popupFaq__question">
+            Хто безпосередньо проводить викуп пристрою?
+          </summary>
+          <p class="popupFaq__answer">
+            Викуп пристрою здійснюється ТОВ "БРІЗ!"
+          </p>
+        </details>
+      </div>
+    </div>
+  </div>
+  <!-- #endregion popupFaq-->
+  
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  width: 336px;
+  box-sizing: border-box;
+  padding: 24px 16px;
+
+  border-radius: 24px;
+  background: #FFFFFF99;
+  backdrop-filter: blur(80px);
+
+  @include on-tablet {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  &__title {
+    margin: 0;
+
+    @extend %text-h1;
+
+    @include on-tablet {
+      font-size: 32px;
+      line-height: 36px;
+    }
+
+    @include on-desktop {
+      font-size: 48px;
+      line-height: 48px;
+    }
+  }
+
+  &__btn {
+    @include button;
+
+    background-color: $main-green;
+
+    @include on-tablet {
+      width: 400px;
+    }
+  }
+}

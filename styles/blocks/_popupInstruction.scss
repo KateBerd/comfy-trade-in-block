@@ -1,0 +1,291 @@
+.popupInstruction {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+
+  &.is-open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1001;
+  }
+
+  &__content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: $white-color;
+    background-image: url('../../images/background_popupInstruction.svg');
+    background-size: cover;
+    background-position: top;
+    border-radius: 25px;
+    padding: 24px;
+    box-sizing: border-box;
+    z-index: 1002;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include on-tablet {
+      width: 600px;
+      height: 80vh;
+      padding-inline: 35px;
+    }
+
+    @include on-desktop {
+      width: 90vw;
+      height: 80vh;
+      background-position: center 25%;
+    }
+  }
+
+  &__btnClose {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border: none;
+    border-radius: 50%;
+    background-image: url('../../images/icon_close.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+
+    @include on-desktop {
+      top: 40px;
+      right: 40px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include on-desktop {
+      flex-direction: row;
+      gap: 13px;
+    }
+  }
+
+  &__logo {
+    width: 243px;
+    height: 60px;
+
+    @include on-desktop {
+      width: 400px;
+      height: 100px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 44px;
+    text-align: center;
+
+    @include on-desktop {
+      font-size: 94px;
+      line-height: 110px;
+    }
+  }
+
+  &__body {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 400px;
+
+    @include on-desktop {
+      margin-top: 12px;
+      border-radius: 24px;
+      background: #FFFFFF99;
+      backdrop-filter: blur(80px);
+      width: 1122px;
+      max-width: none;
+      padding: 40px 60px;
+      box-sizing: border-box;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    @include on-tablet {
+      gap: 24px;
+    }
+
+    @include on-desktop {
+      align-items: flex-start;
+      gap: 24px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    @include on-desktop {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 24px;
+    }
+  }
+
+  &__item-number {
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 123px;
+    min-width: 123px;
+    height: 50px;
+    border-radius: 48px;
+    background: $gradient-green;
+
+    @extend %text-h1;
+  }
+
+  &__item-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    @include on-desktop{
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+
+  &__item-title {
+    margin: 0;
+    @extend %text-h2;
+    text-align: center;
+
+    @include on-desktop {
+      font-weight: 700;
+      font-size: 34px;
+      line-height: 50px;
+    }
+  }
+
+  &__item-desc {
+    @extend %text-body;
+    text-align: center;
+    margin: 0;
+
+    @include on-desktop {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: start;
+    }
+  }
+
+  &__item-link {
+      color: $main-green;
+
+      &:visited {
+        color: $main-green;
+      }
+    }
+
+  &__item-whatCanBeGiven {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding-block: 16px;
+    padding-inline: 57px;
+    box-sizing: border-box;
+    background-color: $green-block;
+    border-radius: 24px;
+    text-align: start;
+
+    @include on-desktop {
+      flex-shrink: 1;
+    }
+  }
+
+  &__item-whatCanBeGiven-item {
+    @include on-desktop {
+      display: flex;
+      gap: 16px;
+    }
+  }
+
+  &__item-whatCanBeGiven-desc {
+    margin: 0;
+  }
+
+  &__item-btn {
+    @include button;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    
+    background: $gradient-button;
+    margin-bottom: 40px;
+    width: 276px;
+    color: black;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+
+
+    @include on-desktop {
+      min-width: 276px;
+      align-self: center;
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-btn-icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  &__desc {
+    @extend %text-subtitle1;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: $gradient-orange;
+    border-radius: 48px;
+    padding: 10px 24px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}

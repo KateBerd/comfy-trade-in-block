@@ -1,0 +1,142 @@
+.cards {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    @include on-tablet {
+      @include page-grid;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    height: 100%;
+    width: 336px;
+    box-sizing: border-box;
+    padding: 24px 16px;
+
+    border-radius: 24px;
+    background: #FFFFFF99;
+    backdrop-filter: blur(80px);
+
+    @include on-tablet {
+      grid-column: span 1;
+      width: 100%;
+    }
+  }
+    
+  &__card-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  &__card-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    width: 100%;
+  }
+
+  &__card-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__card-title {
+    margin: 0;
+    text-align: center;
+
+    @extend %text-h2;
+  }
+
+  &__card-desc {
+    margin: 0;
+    text-align: center;
+
+    @extend %text-body;
+  }
+
+  &__btn-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__btn {
+    @include button;
+
+    &--green {
+      background-color: $main-green;
+    }
+
+    &--outline {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      
+      background: $gradient-button;
+      color: black;
+
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 100%;
+
+      max-width: 218px;
+      height: 38px;
+
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      transform: rotate(3.94deg);
+
+      @include on-desktop {
+        min-width: 276px;
+        align-self: center;
+      }
+    }
+  }
+
+  &__item-btn-icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  &__btn-arrow {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 40px;
+    height: 40px;
+    pointer-events: none; 
+
+    @include on-tablet {
+      width: 30px;
+      height: 30px;
+      top: -20px;
+      right: -15px;
+    }
+
+    @include on-desktop {
+      width: 50px;
+      height: 50px;
+      top: -40px;
+      right: -35px;
+    }
+  }
+}
