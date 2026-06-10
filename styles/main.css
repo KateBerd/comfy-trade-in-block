@@ -438,6 +438,7 @@
   }
 }
 .popupInstruction__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -448,6 +449,15 @@
     flex-direction: row;
     align-items: flex-start;
     gap: 24px;
+  }
+  .popupInstruction__item:first-child::after {
+    content: "";
+    position: absolute;
+    left: 60px;
+    top: 50px;
+    height: 230%;
+    border-left: 3px dashed #43B02A;
+    z-index: -1;
   }
 }
 .popupInstruction__item-number {
